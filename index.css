@@ -1,0 +1,17 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans;
+    background-color: #FFF8FB;
+    color: #1E1E1E;
+    scroll-behavior: smooth;
+  }
+}
+
+.vsl-shadow {
+  box-shadow: 0 0 50px -12px rgba(233, 30, 99, 0.2);
+}
