@@ -1,5 +1,7 @@
 
 import React, { useState, useEffect, useRef, useMemo } from 'react';
+
+const camilaImage = "/src/assets/images/camila_especialista_1785977059971.jpg";
 import { 
   CheckCircle2, 
   Smartphone, 
@@ -327,7 +329,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
 const Navbar: React.FC = () => (
   <nav className="fixed top-0 left-0 w-full z-50 bg-[#FFFFFF]/90 backdrop-blur-xl border-b border-[#F2DCE6]">
     <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-center">
-      <span className="text-[#1E1E1E] font-black text-xl tracking-tighter uppercase italic">PAPELARIA<span className="text-[#E91E63]">DESCOMPLICADA</span></span>
+      <span className="text-[#1E1E1E] font-black text-xl tracking-tighter uppercase italic">GUIA LOJA DE <span className="text-[#E91E63]">MAQUIAGEM DE R$10</span></span>
     </div>
   </nav>
 );
@@ -348,7 +350,7 @@ const Hero: React.FC = () => (
       </h1>
       
       <p className="text-xs md:text-lg text-[#666666] mb-14 font-black max-w-2xl mx-auto leading-relaxed">
-        Assista ao vídeo abaixo e descubra como seguir um passo a passo simples para montar sua loja, encontrar fornecedores baratos, escolher os produtos certos e fazer suas primeiras vendas sem se sentir perdida.
+        Assista ao vídeo abaixo e descubra como seguir um passo a passo simples para montar sua loja.
       </p>
 
       <div className="w-full max-w-3xl transform hover:scale-[1.01] transition-transform duration-500">
@@ -446,7 +448,7 @@ const Features: React.FC = () => {
         <div className="text-center mb-10">
           <p className="text-[#E91E63] font-black text-[12px] uppercase tracking-[0.4em] mb-3">GUIA COMPLETO NO SEU CELULAR</p>
           <h2 className="text-2xl md:text-3xl font-black text-[#1E1E1E] mb-4 uppercase tracking-tighter italic">SUA LOJA DE MAQUIAGEM DE R$10 NA PALMA DA MÃO</h2>
-          <p className="text-[#666666] text-sm md:text-base font-medium max-w-2xl mx-auto leading-relaxed">Tudo o que você precisa para começar em casa, em um só lugar: passo a passo completo, fornecedores selecionados, produtos que mais vendem, calculadora automática de lucro, controle de estoque simplificado, textos prontos para divulgação e muito mais.</p>
+          <p className="text-[#666666] text-sm md:text-base font-medium max-w-2xl mx-auto leading-relaxed">Tudo o que você precisa para começar em casa, em um só lugar: passo a passo completo.</p>
         </div>
 
         <div className="flex flex-col items-center justify-center mb-10 text-center opacity-80">
@@ -475,11 +477,11 @@ const Features: React.FC = () => {
             { icon: <Rocket size={28} />, title: "🚀 COMECE SUA LOJA COM APENAS R$100", desc: "Descubra exatamente quais produtos comprar com seus primeiros R$100 e monte seu primeiro estoque do jeito certo, sem gastar dinheiro à toa." },
             { icon: <FileText size={28} />, title: "📖 PASSO A PASSO DO ZERO AO PRIMEIRO LUCRO", desc: "Saiba exatamente o que fazer primeiro, mesmo sem experiência. É só abrir o guia e seguir cada etapa." },
             { icon: <Layers size={28} />, title: "🏪 LISTA DE FORNECEDORES SELECIONADOS", desc: "Compre direto de fornecedores confiáveis, com produtos baratos, sem pedido mínimo e com muito mais margem de lucro." },
-            { icon: <Zap size={28} />, title: "🔥 PRODUTOS QUE MAIS VENDEM", desc: "Descubra quais produtos têm maior giro para investir seu dinheiro nos produtos certos e vender mais rápido." },
+            { icon: <Zap size={28} />, title: "🔥 PRODUTOS QUE MAIS VENDEM", desc: "Veja quais produtos têm maior giro para investir seu dinheiro nos produtos certos e vender mais rápido." },
             { icon: <DollarSign size={28} />, title: "💰 CALCULADORA AUTOMÁTICA DE LUCRO", desc: "Saiba exatamente quanto cobrar, quanto vai lucrar e quanto precisa vender para alcançar sua meta." },
             { icon: <Package size={28} />, title: "📦 CONTROLE DE ESTOQUE SIMPLIFICADO", desc: "Organize sua loja de forma simples e saiba exatamente quais produtos precisam de reposição." },
-            { icon: <Volume2 size={28} />, title: "📢 TEXTOS PRONTOS PARA DIVULGAR", desc: "Copie, cole e comece a divulgar seus produtos no Instagram, WhatsApp e Status, mesmo sem saber vender." },
-            { icon: <TrendingUp size={28} />, title: "📈 PLANO PARA FAZER SUAS PRIMEIRAS VENDAS", desc: "Siga um plano simples para conquistar seus primeiros clientes e transformar sua loja em uma renda extra." }
+            { icon: <Volume2 size={28} />, title: "📢 TEXTOS PRONTOS PARA DIVULGAR", desc: "Copie, cole e comece a divulgar seus produtos no Instagram, WhatsApp e Status." },
+            { icon: <TrendingUp size={28} />, title: "📈 PLANO PARA FAZER SUAS PRIMEIRAS VENDAS", desc: "Siga um plano simples para conquistar seus primeiros clientes e transformar sua loja em uma renda de verdade." }
           ].map((item, idx) => (
             <div key={idx} className="flex flex-col items-center text-center bg-[#FFFFFF] p-8 rounded-2xl border border-[#F2DCE6] shadow-sm">
               <div className="w-14 h-14 bg-[#FFF8FB] rounded-2xl flex items-center justify-center text-[#E91E63] border border-[#F2DCE6] mb-6 shadow-sm">
@@ -500,7 +502,7 @@ const Testimonials: React.FC = () => {
     {
       name: "Juliana Martins",
       role: "Empreendedora",
-      text: "Eu já tinha salvo um monte de vídeos e até comprado uma lista de fornecedores. O problema é que eu continuava sem saber o que fazer primeiro. Esse guia foi o primeiro lugar onde encontrei tudo organizado. Não precisei mais ficar juntando informação de vários lugares, era só abrir e seguir o passo a passo. Isso me deu muito mais segurança para começar. 🥰",
+      text: "Eu já tinha salvo um monte de vídeos e até comprado uma lista de fornecedores. O problema é que eu continuava sem saber o que fazer primeiro. Esse guia foi o primeiro lugar onde encontrei tudo organizado. Era só abrir e seguir o passo a passo. Isso me deu muito mais segurança para começar. 🥰",
       image: "https://i.postimg.cc/0jh0NnNF/image_15_300x300.webp"
     },
     {
@@ -804,12 +806,9 @@ const Deliverables: React.FC = () => {
                 </div>
                 <div className="mb-6">
                   <span className="text-xs font-black text-[#E91E63] bg-[#FFF1F6] px-3 py-1 rounded-full uppercase tracking-widest mb-3 inline-block border border-[#F2DCE6]">🎁 BÔNUS 01</span>
-                  <h4 className="text-lg md:text-xl font-black text-[#1E1E1E] uppercase tracking-tight mb-3 italic leading-snug">
+                  <h4 className="text-lg md:text-xl font-black text-[#1E1E1E] uppercase tracking-tight mb-5 italic leading-snug">
                     VÍDEO AULA COMPLETA: COMO USAR O GUIA DO JEITO CERTO
                   </h4>
-                  <p className="text-[#666666] font-medium text-xs md:text-sm leading-relaxed mb-5">
-                    Aprenda exatamente como utilizar cada ferramenta do guia para aproveitar todos os recursos desde o primeiro dia e montar sua loja sem dúvidas.
-                  </p>
 
                   <ul className="text-left text-xs text-[#1E1E1E] font-semibold space-y-2 bg-[#FFF1F6] p-4 rounded-xl border border-[#F2DCE6]">
                     <li className="flex items-start gap-2">
@@ -855,12 +854,9 @@ const Deliverables: React.FC = () => {
                 </div>
                 <div className="mb-6">
                   <span className="text-xs font-black text-[#D81B60] bg-[#FFF1F6] px-3 py-1 rounded-full uppercase tracking-widest mb-3 inline-block border border-[#F2DCE6]">🎁 BÔNUS 02</span>
-                  <h4 className="text-lg md:text-xl font-black text-[#1E1E1E] uppercase tracking-tight mb-3 italic leading-snug">
+                  <h4 className="text-lg md:text-xl font-black text-[#1E1E1E] uppercase tracking-tight mb-5 italic leading-snug">
                     FATURE SEUS PRIMEIROS R$500 COM SUA LOJA DE MAQUIAGEM DE R$10
                   </h4>
-                  <p className="text-[#666666] font-medium text-xs md:text-sm leading-relaxed mb-5">
-                    Um plano prático para montar seu primeiro estoque, fazer suas primeiras vendas e organizar suas primeiras reposições, mesmo começando em casa com apenas R$100.
-                  </p>
 
                   <ul className="text-left text-xs text-[#1E1E1E] font-semibold space-y-2 bg-[#FFF1F6] p-4 rounded-xl border border-[#F2DCE6]">
                     <li className="flex items-start gap-2">
@@ -906,12 +902,9 @@ const Deliverables: React.FC = () => {
                 </div>
                 <div className="mb-6">
                   <span className="text-xs font-black text-[#FF5C93] bg-[#FFF1F6] px-3 py-1 rounded-full uppercase tracking-widest mb-3 inline-block border border-[#F2DCE6]">🎁 BÔNUS 03</span>
-                  <h4 className="text-lg md:text-xl font-black text-[#1E1E1E] uppercase tracking-tight mb-3 italic leading-snug">
+                  <h4 className="text-lg md:text-xl font-black text-[#1E1E1E] uppercase tracking-tight mb-5 italic leading-snug">
                     CHECKLIST COMPLETO PARA MONTAR SUA LOJA DO ZERO
                   </h4>
-                  <p className="text-[#666666] font-medium text-xs md:text-sm leading-relaxed mb-5">
-                    Um checklist simples e prático para acompanhar cada etapa da montagem da sua loja e garantir que você não esqueça nada importante.
-                  </p>
 
                   <ul className="text-left text-xs text-[#1E1E1E] font-semibold space-y-2 bg-[#FFF1F6] p-4 rounded-xl border border-[#F2DCE6]">
                     <li className="flex items-start gap-2">
@@ -947,6 +940,73 @@ const Deliverables: React.FC = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Specialist: React.FC = () => {
+  return (
+    <section className="py-16 bg-[#FFFFFF] px-6 border-y border-[#F8E8EF]">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-12">
+          <p className="text-[#E91E63] font-black text-[12px] uppercase tracking-[0.4em] mb-3">CONHEÇA A CRIADORA DO GUIA</p>
+          <h2 className="text-2xl md:text-4xl font-black text-[#1E1E1E] uppercase tracking-tighter italic">
+            QUEM ESTÁ POR TRÁS DO GUIA?
+          </h2>
+          <div className="w-16 h-1 bg-[#E91E63] mx-auto rounded-full mt-4" />
+        </div>
+
+        <div className="grid md:grid-cols-12 gap-10 items-center">
+          <div className="md:col-span-5 flex justify-center">
+            <div className="relative w-full max-w-sm">
+              <div className="absolute -inset-2 bg-gradient-to-r from-[#FF5C93] to-[#E91E63] rounded-[2.5rem] blur-xl opacity-20" />
+              <div className="relative bg-[#FFF8FB] border-4 border-[#F2DCE6] rounded-[2.2rem] overflow-hidden shadow-2xl">
+                <img
+                  src={camilaImage}
+                  alt="Camila - Especialista"
+                  className="w-full h-auto object-cover"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="p-4 bg-[#FFFFFF] text-center border-t border-[#F2DCE6]">
+                  <h4 className="font-black text-[#1E1E1E] uppercase tracking-tight text-base">CAMILA</h4>
+                  <p className="text-[#E91E63] font-bold text-xs uppercase tracking-widest">Criadora do Guia Loja de Maquiagem de R$10</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:col-span-7 space-y-4 text-[#444444] text-sm md:text-base font-medium leading-relaxed">
+            <h3 className="text-xl md:text-2xl font-black text-[#1E1E1E] uppercase tracking-tight italic mb-2">
+              Olá, eu sou a <span className="text-[#E91E63]">Camila</span>.
+            </h3>
+            
+            <p>
+              Eu sei como é querer começar um negócio e não saber por onde começar.
+            </p>
+            <p>
+              Quando a gente pesquisa na internet, encontra um vídeo falando uma coisa, outro dizendo outra, uma lista de fornecedores aqui, uma dica ali... e no final continua sem saber qual é o primeiro passo.
+            </p>
+            <p className="font-bold text-[#1E1E1E]">
+              Foi por isso que organizei este guia.
+            </p>
+            <p>
+              Meu objetivo foi reunir, em um único lugar, tudo o que eu gostaria que alguém tivesse me mostrado quando comecei a estudar esse modelo de negócio.
+            </p>
+            <div className="bg-[#FFF1F6] p-5 rounded-2xl border border-[#F2DCE6] text-[#1E1E1E] font-semibold text-xs md:text-sm leading-relaxed my-2">
+              Aqui você encontra um passo a passo simples, fornecedores selecionados, os produtos que mais vendem, uma calculadora automática de lucro, controle de estoque simplificado, textos prontos para divulgação e ferramentas que ajudam você a montar sua loja de maquiagem de R$10 em casa sem se sentir perdida.
+            </div>
+            <p>
+              Quero que você pare de juntar informações soltas e tenha um caminho claro para seguir.
+            </p>
+            <p>
+              É só abrir o guia, seguir cada etapa e começar no seu ritmo.
+            </p>
+            <p className="font-black text-[#E91E63] italic pt-2">
+              Espero que ele facilite a sua jornada tanto quanto foi pensado para facilitar a vida de quem está começando.
+            </p>
           </div>
         </div>
       </div>
@@ -1231,6 +1291,7 @@ const App: React.FC = () => {
       <Testimonials />
       <Results />
       <Deliverables />
+      <Specialist />
       <Pricing />
       <FAQ />
       <Footer />
