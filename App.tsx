@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-
-const camilaImage = "/src/assets/images/camila_especialista_1785977059971.jpg";
+import vslThumbnailWebp from './src/assets/images/vsl_video_thumbnail.webp';
+import camilaImageWebp from './src/assets/images/camila_especialista.webp';
 import { 
   CheckCircle2, 
   Smartphone, 
@@ -326,38 +326,30 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
 
 // --- Page Sections ---
 
-const Navbar: React.FC = () => (
-  <nav className="fixed top-0 left-0 w-full z-50 bg-[#FFFFFF]/90 backdrop-blur-xl border-b border-[#F2DCE6]">
-    <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-center">
-      <span className="text-[#1E1E1E] font-black text-xl tracking-tighter uppercase italic">GUIA LOJA DE <span className="text-[#E91E63]">MAQUIAGEM DE R$10</span></span>
-    </div>
-  </nav>
-);
-
 const Hero: React.FC = () => (
-  <section className="pt-24 pb-20 px-6 bg-[#FFF1F6] text-[#1E1E1E] flex flex-col items-center text-center relative overflow-hidden border-b border-[#F8E8EF]">
+  <section className="pt-6 md:pt-12 pb-12 md:pb-16 px-4 md:px-6 bg-[#FFF1F6] text-[#1E1E1E] flex flex-col items-center text-center relative overflow-hidden border-b border-[#F8E8EF]">
     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-gradient-to-b from-[#FF5C93]/15 to-[#E91E63]/5 blur-[120px] rounded-full -z-10" />
     <div className="absolute -top-[10%] -right-[10%] w-[300px] h-[300px] bg-[#E91E63]/5 blur-[100px] rounded-full -z-10" />
     
     <div className="max-w-5xl mx-auto flex flex-col items-center">
-      <div className="inline-flex items-center gap-3 px-8 py-3 bg-[#FFF8FB] text-[#E91E63] rounded-full border border-[#F2DCE6] mb-10 shadow-[0_4px_20px_rgba(233,30,99,0.08)]">
-        <Info size={16} />
-        <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] italic">OPORTUNIDADE ÚNICA DE RENDA EXTRA</span>
+      <div className="inline-flex items-center gap-1.5 px-3 py-1 md:px-6 md:py-2 bg-[#FFF8FB] text-[#E91E63] rounded-full border border-[#F2DCE6] mb-4 md:mb-8 shadow-sm max-w-full">
+        <Info size={13} className="shrink-0" />
+        <span className="text-[9px] sm:text-[10px] md:text-xs font-black uppercase tracking-wider md:tracking-[0.2em] italic truncate">OPORTUNIDADE ÚNICA DE RENDA EXTRA</span>
       </div>
       
-      <h1 className="text-2xl md:text-4xl lg:text-5xl font-[900] mb-8 leading-[1.2] tracking-tight uppercase max-w-4xl mx-auto text-[#1E1E1E]">
+      <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-[900] mb-5 md:mb-8 leading-[1.2] tracking-tight uppercase max-w-4xl mx-auto text-[#1E1E1E]">
         MONTE SUA LOJA DE <span className="text-[#E91E63]">MAQUIAGEM DE R$10</span> EM CASA E FATURE ATÉ <span className="text-[#E91E63]">R$1.000 POR SEMANA</span> — MESMO COMEÇANDO DO ZERO E SEM EXPERIÊNCIA.
       </h1>
       
-      <p className="text-xs md:text-lg text-[#666666] mb-14 font-black max-w-2xl mx-auto leading-relaxed">
+      <p className="text-xs md:text-lg text-[#666666] mb-8 md:mb-14 font-black max-w-2xl mx-auto leading-relaxed">
         Assista ao vídeo abaixo e descubra como seguir um passo a passo simples para montar sua loja.
       </p>
 
       <div className="w-full max-w-3xl transform hover:scale-[1.01] transition-transform duration-500">
         <CustomVideoPlayer 
-          posterUrl="/src/assets/images/vsl_video_thumbnail_1786454882739.jpg"
+          posterUrl={vslThumbnailWebp}
           label="CLIQUE PARA ATIVAR O SOM"
-          videoUrl="https://vimeo.com/1217318241?share=copy"
+          videoUrl="https://vimeo.com/1217322803?share=copy&fl=sv&fe=ci"
           isVertical={true}
           priority={true}
         />
@@ -445,10 +437,16 @@ const Features: React.FC = () => {
   return (
     <section className="py-12 bg-[#FFF1F6] px-6 overflow-hidden border-b border-[#F8E8EF]">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-10">
-          <p className="text-[#E91E63] font-black text-[12px] uppercase tracking-[0.4em] mb-3">GUIA COMPLETO NO SEU CELULAR</p>
-          <h2 className="text-2xl md:text-3xl font-black text-[#1E1E1E] mb-4 uppercase tracking-tighter italic">SUA LOJA DE MAQUIAGEM DE R$10 NA PALMA DA MÃO</h2>
-          <p className="text-[#666666] text-sm md:text-base font-medium max-w-2xl mx-auto leading-relaxed">Tudo o que você precisa para começar em casa, em um só lugar: passo a passo completo.</p>
+        <div className="text-center mb-8 px-2 max-w-2xl mx-auto">
+          <p className="text-[#E91E63] font-black text-[10px] sm:text-[11px] md:text-[12px] uppercase tracking-[0.25em] sm:tracking-[0.35em] mb-2">
+            GUIA COMPLETO NO SEU CELULAR
+          </p>
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-[#1E1E1E] mb-3 uppercase tracking-tight italic leading-snug max-w-xl mx-auto">
+            SUA LOJA DE MAQUIAGEM DE R$10 NA PALMA DA MÃO
+          </h2>
+          <p className="text-[#666666] text-xs sm:text-sm md:text-base font-medium max-w-md md:max-w-xl mx-auto leading-relaxed">
+            Tudo o que você precisa para começar em casa, em um só lugar: passo a passo completo.
+          </p>
         </div>
 
         <div className="flex flex-col items-center justify-center mb-10 text-center opacity-80">
@@ -685,14 +683,14 @@ const Results: React.FC = () => {
   return (
     <section className="py-16 bg-[#FFF1F6] px-6 border-y border-[#F8E8EF]">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-4xl font-black text-[#1E1E1E] mb-2 uppercase tracking-tighter italic">
+        <div className="text-center mb-8 px-2 max-w-xl mx-auto">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-black text-[#1E1E1E] mb-1.5 uppercase tracking-tight italic leading-snug">
             VEJA POR QUANTO AS LOJAS COMPRAM...
           </h2>
-          <h3 className="text-xl md:text-3xl font-black text-[#E91E63] mb-4 uppercase tracking-tight italic">
+          <h3 className="text-base sm:text-lg md:text-xl font-black text-[#E91E63] mb-3 uppercase tracking-tight italic leading-snug">
             ...E POR QUANTO ELAS VENDEM.
           </h3>
-          <p className="text-[#666666] text-sm md:text-base font-medium max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[#666666] text-xs sm:text-sm md:text-base font-medium max-w-md mx-auto leading-relaxed">
             Quando você compra direto dos fornecedores certos, sua margem de lucro pode ser muito maior.
           </p>
         </div>
@@ -965,7 +963,7 @@ const Specialist: React.FC = () => {
               <div className="absolute -inset-2 bg-gradient-to-r from-[#FF5C93] to-[#E91E63] rounded-[2.5rem] blur-xl opacity-20" />
               <div className="relative bg-[#FFF8FB] border-4 border-[#F2DCE6] rounded-[2.2rem] overflow-hidden shadow-2xl">
                 <img
-                  src={camilaImage}
+                  src={camilaImageWebp}
                   alt="Camila - Especialista"
                   className="w-full h-auto object-cover"
                   referrerPolicy="no-referrer"
@@ -1284,16 +1282,15 @@ const Footer: React.FC = () => (
 const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#FFF8FB] text-[#1E1E1E] selection:bg-[#FFF1F6] selection:text-[#E91E63] antialiased overflow-x-hidden font-sans">
-      <Navbar />
       <Hero />
       <HowItWorks />
       <Features />
       <Testimonials />
       <Results />
       <Deliverables />
-      <Specialist />
       <Pricing />
       <FAQ />
+      <Specialist />
       <Footer />
       <ScarcityNotification />
     </div>
