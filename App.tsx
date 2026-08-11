@@ -355,9 +355,9 @@ const Hero: React.FC = () => (
 
       <div className="w-full max-w-3xl transform hover:scale-[1.01] transition-transform duration-500">
         <CustomVideoPlayer 
-          posterUrl="https://i.postimg.cc/sX0hqL2w/1.webp"
+          posterUrl="/src/assets/images/vsl_video_thumbnail_1786454882739.jpg"
           label="CLIQUE PARA ATIVAR O SOM"
-          videoUrl="https://vimeo.com/1200216131"
+          videoUrl="https://vimeo.com/1217318241?share=copy"
           isVertical={true}
           priority={true}
         />
