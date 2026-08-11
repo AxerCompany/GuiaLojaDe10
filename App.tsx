@@ -180,6 +180,7 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ posterUrl, videoU
               className="absolute inset-0 w-full h-full object-cover opacity-100 transition-transform duration-700 group-hover:scale-110"
               fetchPriority={priority ? "high" : "auto"}
               loading={priority ? "eager" : "lazy"}
+              decoding="async"
               width={isVertical ? 320 : 1280}
               height={isVertical ? 568 : 720}
             />
@@ -243,6 +244,14 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  // Preload all carousel images in memory as soon as component mounts
+  useEffect(() => {
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, [images]);
+
   const next = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
   };
@@ -276,12 +285,14 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
         className="flex overflow-x-hidden snap-x snap-mandatory rounded-[2.5rem] shadow-2xl border border-[#F2DCE6] bg-[#FFF1F6]"
       >
         {images.map((img, i) => (
-          <div key={i} className={`flex-shrink-0 w-full snap-center ${aspectRatio} relative overflow-hidden`}>
+          <div key={i} className={`flex-shrink-0 w-full snap-center ${aspectRatio} relative overflow-hidden flex items-center justify-center bg-[#FFFFFF]`}>
             <img 
               src={img} 
-              alt={`Slide ${i}`} 
-              className="absolute inset-0 w-full h-full object-cover"
-              loading="lazy"
+              alt={`Slide ${i + 1}`} 
+              className="w-full h-full object-contain rounded-2xl"
+              loading={i <= 1 ? "eager" : "lazy"}
+              fetchPriority={i === 0 ? "high" : "auto"}
+              decoding="async"
               width={width}
               height={height}
             />
@@ -554,6 +565,7 @@ const Testimonials: React.FC = () => {
                     width={48} 
                     height={48} 
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div>
@@ -738,6 +750,7 @@ const Results: React.FC = () => {
                       src={p.image}
                       alt={p.name}
                       loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover rounded-xl transition-transform duration-500 hover:scale-105"
                     />
                   </div>
@@ -968,6 +981,8 @@ const Specialist: React.FC = () => {
                   alt="Camila - Criadora do Método"
                   className="w-full h-auto object-cover"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="p-4 bg-[#FFFFFF] text-center border-t border-[#F2DCE6]">
                   <h4 className="font-black text-[#1E1E1E] uppercase tracking-tight text-base">CAMILA</h4>
