@@ -1,7 +1,5 @@
 
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import vslThumbnailWebp from './src/assets/images/vsl_video_thumbnail.webp';
-import camilaImageWebp from './src/assets/images/camila_especialista.webp';
 import { 
   CheckCircle2, 
   Smartphone, 
@@ -347,7 +345,7 @@ const Hero: React.FC = () => (
 
       <div className="w-full max-w-3xl transform hover:scale-[1.01] transition-transform duration-500">
         <CustomVideoPlayer 
-          posterUrl={vslThumbnailWebp}
+          posterUrl="https://i.postimg.cc/Kz4MtbDF/Whats-App-Image-2026-08-11-at-14-04-59.webp"
           label="CLIQUE PARA ATIVAR O SOM"
           videoUrl="https://vimeo.com/1217322803?share=copy&fl=sv&fe=ci"
           isVertical={true}
@@ -374,7 +372,7 @@ const HowItWorks: React.FC = () => (
             title: "✅ 1. O PASSO A PASSO VAI DIRETO PRO SEU CELULAR", 
             desc: (
               <>
-                Você acessa o guia e já vê exatamente como começar sua loja de maquiagem de R$10 em casa com apenas R$100, mesmo sem experiência e começando do zero.
+                Você acessa o Método Make Lucrativa e já vê exatamente como começar sua loja de maquiagem de R$10 em casa com apenas R$100, mesmo sem experiência e começando do zero.
               </>
             )
           },
@@ -416,22 +414,25 @@ const HowItWorks: React.FC = () => (
 
 const Features: React.FC = () => {
   const images = [
-    "https://i.postimg.cc/rwGJTxcX/Whats-App-Image-2026-06-10-at-11-13-27.webp",
-    "https://i.postimg.cc/mg3w4C4n/Whats-App-Image-2026-06-10-at-11-13-27-(1).webp",
-    "https://i.postimg.cc/K87NbBF2/Whats-App-Image-2026-06-10-at-11-13-27-(2).webp",
-    "https://i.postimg.cc/DwQghLF2/Whats-App-Image-2026-06-10-at-11-13-28.webp",
-    "https://i.postimg.cc/tgXz4JC4/Whats-App-Image-2026-06-10-at-11-16-12.webp",
-    "https://i.postimg.cc/3wKZxNJJ/Whats-App-Image-2026-06-10-at-11-16-12-(1).webp",
-    "https://i.postimg.cc/vmQvZTHm/Whats-App-Image-2026-06-10-at-11-16-13-(1).webp",
-    "https://i.postimg.cc/bw0TPk8j/Whats-App-Image-2026-06-10-at-11-13-28-(1).webp",
-    "https://i.postimg.cc/Bn5g3Hsf/Whats-App-Image-2026-06-10-at-11-13-28-(2).webp",
-    "https://i.postimg.cc/zGwjNK55/Whats-App-Image-2026-06-10-at-11-13-28-(3).webp",
-    "https://i.postimg.cc/0yGfvDxj/Whats-App-Image-2026-06-10-at-11-13-29.webp",
-    "https://i.postimg.cc/Jz3q8Zmz/Whats-App-Image-2026-06-10-at-11-13-29-(2).webp",
-    "https://i.postimg.cc/9fWBQ0FC/Whats-App-Image-2026-06-10-at-11-13-30.webp",
-    "https://i.postimg.cc/jjshS2dr/Whats-App-Image-2026-06-10-at-11-13-30-(1).webp",
-    "https://i.postimg.cc/MGWYpHKx/Whats-App-Image-2026-06-10-at-11-13-30-(3).webp",
-    "https://i.postimg.cc/6Q9hpq5W/Whats-App-Image-2026-06-10-at-11-13-31.webp"
+    "https://i.postimg.cc/Kz4MtbDF/Whats-App-Image-2026-08-11-at-14-04-59.webp",
+    "https://i.postimg.cc/xCqzLQ32/Whats-App-Image-2026-08-11-at-14-04-59-(1).webp",
+    "https://i.postimg.cc/Y9jWQ7zc/Whats-App-Image-2026-08-11-at-14-04-59-(2).webp",
+    "https://i.postimg.cc/d1DyGFjP/Whats-App-Image-2026-08-11-at-14-05-00.webp",
+    "https://i.postimg.cc/k4DbWCF0/Whats-App-Image-2026-08-11-at-14-05-00-(1).webp",
+    "https://i.postimg.cc/LXh1jSB7/Whats-App-Image-2026-08-11-at-14-05-01-(1).webp",
+    "https://i.postimg.cc/MT4jDL9X/Whats-App-Image-2026-08-11-at-14-05-02.webp",
+    "https://i.postimg.cc/853rHYZc/Whats-App-Image-2026-08-11-at-14-05-02-(1).webp",
+    "https://i.postimg.cc/MT4jDL9G/Whats-App-Image-2026-08-11-at-14-05-02-(2).webp",
+    "https://i.postimg.cc/rmbtJHfV/Whats-App-Image-2026-08-11-at-14-05-02-(3).webp",
+    "https://i.postimg.cc/qRYCLF1B/Whats-App-Image-2026-08-11-at-14-05-02-(4).webp",
+    "https://i.postimg.cc/fLF0KP8N/Whats-App-Image-2026-08-11-at-14-05-03.webp",
+    "https://i.postimg.cc/RF8nRYgm/Whats-App-Image-2026-08-11-at-14-05-03-(1).webp",
+    "https://i.postimg.cc/zBMRjQxY/Whats-App-Image-2026-08-11-at-14-05-03-(2).webp",
+    "https://i.postimg.cc/1tTNHdvZ/Whats-App-Image-2026-08-11-at-14-05-04.webp",
+    "https://i.postimg.cc/pT7nZSqg/Whats-App-Image-2026-08-11-at-14-05-04-(1)-(1).webp",
+    "https://i.postimg.cc/tT7xFbNq/Whats-App-Image-2026-08-11-at-14-05-05.webp",
+    "https://i.postimg.cc/zB3gTNFJ/Whats-App-Image-2026-08-11-at-14-05-05-(1).webp",
+    "https://i.postimg.cc/50jC8JSf/Whats-App-Image-2026-08-11-at-14-05-05-(2).webp"
   ];
 
   return (
@@ -439,7 +440,7 @@ const Features: React.FC = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8 px-2 max-w-2xl mx-auto">
           <p className="text-[#E91E63] font-black text-[10px] sm:text-[11px] md:text-[12px] uppercase tracking-[0.25em] sm:tracking-[0.35em] mb-2">
-            GUIA COMPLETO NO SEU CELULAR
+            MÉTODO MAKE LUCRATIVA NO SEU CELULAR
           </p>
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-[#1E1E1E] mb-3 uppercase tracking-tight italic leading-snug max-w-xl mx-auto">
             SUA LOJA DE MAQUIAGEM DE R$10 NA PALMA DA MÃO
@@ -451,7 +452,7 @@ const Features: React.FC = () => {
 
         <div className="flex flex-col items-center justify-center mb-10 text-center opacity-80">
           <p className="text-[13px] md:text-sm font-black text-[#1E1E1E] leading-relaxed max-w-md">
-            Deslize para o lado e descubra tudo o que você encontra no guia.
+            Deslize para o lado e descubra tudo o que você encontra no método.
           </p>
           <div className="mt-2 text-[#E91E63]">
             <MoveRight size={16} />
@@ -473,7 +474,7 @@ const Features: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             { icon: <Rocket size={28} />, title: "🚀 COMECE SUA LOJA COM APENAS R$100", desc: "Descubra exatamente quais produtos comprar com seus primeiros R$100 e monte seu primeiro estoque do jeito certo, sem gastar dinheiro à toa." },
-            { icon: <FileText size={28} />, title: "📖 PASSO A PASSO DO ZERO AO PRIMEIRO LUCRO", desc: "Saiba exatamente o que fazer primeiro, mesmo sem experiência. É só abrir o guia e seguir cada etapa." },
+            { icon: <FileText size={28} />, title: "📖 PASSO A PASSO DO ZERO AO PRIMEIRO LUCRO", desc: "Saiba exatamente o que fazer primeiro, mesmo sem experiência. É só abrir o método e seguir cada etapa." },
             { icon: <Layers size={28} />, title: "🏪 LISTA DE FORNECEDORES SELECIONADOS", desc: "Compre direto de fornecedores confiáveis, com produtos baratos, sem pedido mínimo e com muito mais margem de lucro." },
             { icon: <Zap size={28} />, title: "🔥 PRODUTOS QUE MAIS VENDEM", desc: "Veja quais produtos têm maior giro para investir seu dinheiro nos produtos certos e vender mais rápido." },
             { icon: <DollarSign size={28} />, title: "💰 CALCULADORA AUTOMÁTICA DE LUCRO", desc: "Saiba exatamente quanto cobrar, quanto vai lucrar e quanto precisa vender para alcançar sua meta." },
@@ -500,25 +501,25 @@ const Testimonials: React.FC = () => {
     {
       name: "Juliana Martins",
       role: "Empreendedora",
-      text: "Eu já tinha salvo um monte de vídeos e até comprado uma lista de fornecedores. O problema é que eu continuava sem saber o que fazer primeiro. Esse guia foi o primeiro lugar onde encontrei tudo organizado. Era só abrir e seguir o passo a passo. Isso me deu muito mais segurança para começar. 🥰",
+      text: "Eu já tinha salvo um monte de vídeos e até comprado uma lista de fornecedores. O problema é que eu continuava sem saber o que fazer primeiro. O Método Make Lucrativa foi o primeiro lugar onde encontrei tudo organizado. Era só abrir e seguir o passo a passo. Isso me deu muito mais segurança para começar. 🥰",
       image: "https://i.postimg.cc/0jh0NnNF/image_15_300x300.webp"
     },
     {
       name: "Fernanda Souza",
       role: "Iniciante",
-      text: "O que mais gostei foi que o guia não entrega só os fornecedores. Ele mostra quais produtos comprar primeiro, quanto investir, como calcular o lucro e até como divulgar. Eu nunca tinha vendido nada e, pela primeira vez, senti que realmente sabia por onde começar. 💖",
+      text: "O que mais gostei foi que o método não entrega só os fornecedores. Ele mostra quais produtos comprar primeiro, quanto investir, como calcular o lucro e até como divulgar. Eu nunca tinha vendido nada e, pela primeira vez, senti que realmente sabia por onde começar. 💖",
       image: "https://i.postimg.cc/CKwHdzFq/image_13_229x300.webp"
     },
     {
       name: "Patrícia Oliveira",
       role: "Renda Extra",
-      text: "Eu tinha muito medo de gastar meus primeiros R$100 comprando os produtos errados. O guia mostra exatamente o que comprar e em qual ordem fazer as coisas. Isso tirou aquela sensação de estar perdida o tempo todo. ✨",
+      text: "Eu tinha muito medo de gastar meus primeiros R$100 comprando os produtos errados. O método mostra exatamente o que comprar e em qual ordem fazer as coisas. Isso tirou aquela sensação de estar perdida o tempo todo. ✨",
       image: "https://i.postimg.cc/0NCnC7tX/image_14_300x300.webp"
     },
     {
       name: "Camila Ferreira",
       role: "Empreendedora",
-      text: "O controle de estoque e a calculadora de lucro foram o que mais me surpreenderam. Eu achei que fosse receber só um guia, mas é muito mais completo. Hoje consigo organizar minhas compras e acompanhar melhor o que realmente sobra em cada venda. 😊",
+      text: "O controle de estoque e a calculadora de lucro foram o que mais me surpreenderam. Eu achei que fosse receber só um conteúdo simples, mas o Método Make Lucrativa é muito mais completo. Hoje consigo organizar minhas compras e acompanhar melhor o que realmente sobra em cada venda. 😊",
       image: "https://i.postimg.cc/t4QzQBwx/image_16_281x300.webp"
     }
   ];
@@ -782,7 +783,7 @@ const Results: React.FC = () => {
         </div>
 
         <p className="text-center text-[#9B9B9B] text-xs font-semibold mt-8 italic max-w-xl mx-auto">
-          Esses são apenas alguns exemplos de produtos encontrados pelos fornecedores disponíveis dentro do guia.
+          Esses são apenas alguns exemplos de produtos encontrados pelos fornecedores disponíveis dentro do método.
         </p>
       </div>
     </section>
@@ -805,13 +806,13 @@ const Deliverables: React.FC = () => {
                 <div className="mb-6">
                   <span className="text-xs font-black text-[#E91E63] bg-[#FFF1F6] px-3 py-1 rounded-full uppercase tracking-widest mb-3 inline-block border border-[#F2DCE6]">🎁 BÔNUS 01</span>
                   <h4 className="text-lg md:text-xl font-black text-[#1E1E1E] uppercase tracking-tight mb-5 italic leading-snug">
-                    VÍDEO AULA COMPLETA: COMO USAR O GUIA DO JEITO CERTO
+                    VÍDEO AULA COMPLETA: COMO USAR O MÉTODO DO JEITO CERTO
                   </h4>
 
                   <ul className="text-left text-xs text-[#1E1E1E] font-semibold space-y-2 bg-[#FFF1F6] p-4 rounded-xl border border-[#F2DCE6]">
                     <li className="flex items-start gap-2">
                       <span className="text-[#E91E63] font-bold">✓</span>
-                      <span>Como navegar pelo guia e aproveitar todas as etapas.</span>
+                      <span>Como navegar pelo método e aproveitar todas as etapas.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-[#E91E63] font-bold">✓</span>
@@ -950,9 +951,9 @@ const Specialist: React.FC = () => {
     <section className="py-16 bg-[#FFFFFF] px-6 border-y border-[#F8E8EF]">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-[#E91E63] font-black text-[12px] uppercase tracking-[0.4em] mb-3">CONHEÇA A CRIADORA DO GUIA</p>
+          <p className="text-[#E91E63] font-black text-[12px] uppercase tracking-[0.4em] mb-3">CONHEÇA A CRIADORA DO MÉTODO</p>
           <h2 className="text-2xl md:text-4xl font-black text-[#1E1E1E] uppercase tracking-tighter italic">
-            QUEM ESTÁ POR TRÁS DO GUIA?
+            QUEM ESTÁ POR TRÁS DO MÉTODO?
           </h2>
           <div className="w-16 h-1 bg-[#E91E63] mx-auto rounded-full mt-4" />
         </div>
@@ -963,14 +964,14 @@ const Specialist: React.FC = () => {
               <div className="absolute -inset-2 bg-gradient-to-r from-[#FF5C93] to-[#E91E63] rounded-[2.5rem] blur-xl opacity-20" />
               <div className="relative bg-[#FFF8FB] border-4 border-[#F2DCE6] rounded-[2.2rem] overflow-hidden shadow-2xl">
                 <img
-                  src={camilaImageWebp}
-                  alt="Camila - Especialista"
+                  src="https://i.postimg.cc/bNbqVvyp/Chat-GPT-Image-11-de-ago-de-2026-14-24-19.png"
+                  alt="Camila - Criadora do Método"
                   className="w-full h-auto object-cover"
                   referrerPolicy="no-referrer"
                 />
                 <div className="p-4 bg-[#FFFFFF] text-center border-t border-[#F2DCE6]">
                   <h4 className="font-black text-[#1E1E1E] uppercase tracking-tight text-base">CAMILA</h4>
-                  <p className="text-[#E91E63] font-bold text-xs uppercase tracking-widest">Criadora do Guia Loja de Maquiagem de R$10</p>
+                  <p className="text-[#E91E63] font-bold text-xs uppercase tracking-widest">Criadora do Método Make Lucrativa</p>
                 </div>
               </div>
             </div>
@@ -988,7 +989,7 @@ const Specialist: React.FC = () => {
               Quando a gente pesquisa na internet, encontra um vídeo falando uma coisa, outro dizendo outra, uma lista de fornecedores aqui, uma dica ali... e no final continua sem saber qual é o primeiro passo.
             </p>
             <p className="font-bold text-[#1E1E1E]">
-              Foi por isso que organizei este guia.
+              Foi por isso que criei o Método Make Lucrativa.
             </p>
             <p>
               Meu objetivo foi reunir, em um único lugar, tudo o que eu gostaria que alguém tivesse me mostrado quando comecei a estudar esse modelo de negócio.
@@ -1000,7 +1001,7 @@ const Specialist: React.FC = () => {
               Quero que você pare de juntar informações soltas e tenha um caminho claro para seguir.
             </p>
             <p>
-              É só abrir o guia, seguir cada etapa e começar no seu ritmo.
+              É só abrir o método, seguir cada etapa e começar no seu ritmo.
             </p>
             <p className="font-black text-[#E91E63] italic pt-2">
               Espero que ele facilite a sua jornada tanto quanto foi pensado para facilitar a vida de quem está começando.
@@ -1043,7 +1044,7 @@ const Pricing: React.FC = () => {
           <div className="p-8 md:p-10 text-center">
             <h3 className="text-2xl font-black text-[#1E1E1E] mb-3 uppercase tracking-tighter italic leading-tight">
               ACESSO COMPLETO AO<br />
-              <span className="text-[#E91E63]">GUIA LOJA DE MAQUIAGEM DE R$10</span>
+              <span className="text-[#E91E63]">MÉTODO MAKE LUCRATIVA</span>
             </h3>
             <p className="text-xs md:text-sm font-medium text-[#666666] mb-6 max-w-sm mx-auto leading-relaxed">
               O passo a passo completo para montar sua loja em casa, mesmo começando do zero e com apenas R$100.
@@ -1092,7 +1093,7 @@ const Pricing: React.FC = () => {
 
             <div className="space-y-3.5 mb-10 text-left border-t border-b border-[#F8E8EF] py-8">
               {[
-                "Acesso imediato ao Guia no seu E-mail",
+                "Acesso imediato ao Método Make Lucrativa no seu E-mail",
                 "Passo a passo completo para montar sua loja do zero",
                 "Plano para começar com apenas R$100",
                 "Lista de fornecedores selecionados",
@@ -1102,7 +1103,7 @@ const Pricing: React.FC = () => {
                 "Textos prontos para divulgação",
                 "Plano para fazer suas primeiras vendas",
                 "Garantia incondicional de 7 dias",
-                "BÔNUS 01: Vídeo aula completa ensinando como usar o guia",
+                "BÔNUS 01: Vídeo aula completa ensinando como usar o método",
                 "BÔNUS 02: Fature seus primeiros R$500 com sua loja de maquiagem de R$10",
                 "BÔNUS 03: Checklist completo para montar sua loja do zero"
               ].map((text, idx) => {
@@ -1156,7 +1157,7 @@ const Pricing: React.FC = () => {
               <span>🛡️</span> GARANTIA INCONDICIONAL DE 7 DIAS
             </h4>
             <p className="text-[#666666] text-xs md:text-sm font-medium leading-relaxed mb-3">
-              Você pode acessar todo o conteúdo, explorar o guia e conhecer todas as ferramentas sem risco. Se dentro de 7 dias sentir que ele não era o que esperava, basta solicitar o reembolso e devolveremos 100% do valor pago.
+              Você pode acessar todo o conteúdo, explorar o método e conhecer todas as ferramentas sem risco. Se dentro de 7 dias sentir que ele não era o que esperava, basta solicitar o reembolso e devolveremos 100% do valor pago.
             </p>
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 text-xs font-black text-[#E91E63]">
               <span className="bg-[#FFF1F6] px-3 py-1 rounded-full border border-[#F2DCE6]">Sem burocracia.</span>
@@ -1179,36 +1180,36 @@ const FAQ: React.FC = () => {
 
   const questions = [
     { 
-      q: "POR ONDE EU RECEBO O GUIA?", 
+      q: "POR ONDE EU RECEBO O MÉTODO MAKE LUCRATIVA?", 
       a: "Assim que o pagamento for aprovado, você recebe os dados de acesso imediatamente no seu e-mail cadastrado. Basta abrir no celular ou computador e começar a seguir o passo a passo." 
     },
     { 
-      q: "NUNCA VENDI NADA. ESSE GUIA É PARA MIM?", 
-      a: "Sim. O guia foi criado justamente para quem está começando do zero. Você aprende o que fazer primeiro, quais produtos comprar, onde encontrar fornecedores e como fazer suas primeiras vendas, mesmo sem experiência." 
+      q: "NUNCA VENDI NADA. ESSE MÉTODO É PARA MIM?", 
+      a: "Sim. O método foi criado justamente para quem está começando do zero. Você aprende o que fazer primeiro, quais produtos comprar, onde encontrar fornecedores e como fazer suas primeiras vendas, mesmo sem experiência." 
     },
     { 
       q: "PRECISO TER MUITO DINHEIRO PARA COMEÇAR?", 
-      a: "Não. O guia mostra como montar sua loja em casa começando com apenas R$100, comprando os produtos certos e evitando gastar dinheiro com itens que podem ficar parados." 
+      a: "Não. O método mostra como montar sua loja em casa começar com apenas R$100, comprando os produtos certos e evitando gastar dinheiro com itens que podem ficar parados." 
     },
     { 
-      q: "O GUIA ENSINA APENAS ONDE COMPRAR OS PRODUTOS?", 
+      q: "O MÉTODO ENSINA APENAS ONDE COMPRAR OS PRODUTOS?", 
       a: "Não. Além da lista de fornecedores selecionados, você recebe um passo a passo completo, lista dos produtos que mais vendem, calculadora automática de lucro, controle de estoque, textos prontos para divulgação e ferramentas para organizar sua loja." 
     },
     { 
       q: "POR QUANTO TEMPO TEREI ACESSO?", 
-      a: "O acesso é seu para consultar sempre que precisar. Você poderá abrir o guia sempre que quiser para revisar o passo a passo, utilizar as ferramentas e acompanhar o crescimento da sua loja." 
+      a: "O acesso é seu para consultar sempre que precisar. Você poderá abrir o método sempre que quiser para revisar o passo a passo, utilizar as ferramentas e acompanhar o crescimento da sua loja." 
     },
     { 
       q: "E SE EU NÃO GOSTAR DO CONTEÚDO?", 
-      a: "Você tem 7 dias de garantia. Se dentro desse período entender que o guia não é para você, basta solicitar o reembolso e devolveremos 100% do valor pago." 
+      a: "Você tem 7 dias de garantia. Se dentro desse período entender que o método não é para você, basta solicitar o reembolso e devolveremos 100% do valor pago." 
     },
     { 
       q: "POSSO ACESSAR PELO CELULAR?", 
-      a: "Sim. O guia foi desenvolvido para ser utilizado diretamente pelo celular, de forma simples e intuitiva, para que você possa acompanhar cada etapa de onde estiver." 
+      a: "Sim. O método foi desenvolvido para ser utilizado diretamente pelo celular, de forma simples e intuitiva, para que você possa acompanhar cada etapa de onde estiver." 
     },
     { 
-      q: "VOU RECEBER ATUALIZAÇÕES DO GUIA?", 
-      a: "Sim. Sempre que houver melhorias ou novos conteúdos incluídos no guia, você poderá acessar a versão atualizada sem precisar comprar novamente." 
+      q: "VOU RECEBER ATUALIZAÇÕES DO MÉTODO?", 
+      a: "Sim. Sempre que houver melhorias ou novos conteúdos incluídos no método, você poderá acessar a versão atualizada sem precisar comprar novamente." 
     }
   ];
 
@@ -1250,7 +1251,7 @@ const FAQ: React.FC = () => {
 const Footer: React.FC = () => (
   <footer className="py-12 bg-[#1E1E1E] text-center px-6 border-t border-[#F2DCE6]/20">
     <div className="max-w-4xl mx-auto">
-      <span className="text-white font-black text-xl tracking-tighter block uppercase italic mb-8">GUIA LOJA DE <span className="text-[#FF5C93]">MAQUIAGEM DE R$10</span></span>
+      <span className="text-white font-black text-xl tracking-tighter block uppercase italic mb-8">MÉTODO <span className="text-[#FF5C93]">MAKE LUCRATIVA</span></span>
       
       <div className="flex flex-wrap justify-center gap-8 text-[10px] font-black text-[#9B9B9B] uppercase tracking-[0.4em] mb-12">
         <a href="#" className="hover:text-[#FF5C93] transition-colors">Privacidade</a>
@@ -1264,7 +1265,7 @@ const Footer: React.FC = () => (
 
       <div className="h-px w-16 bg-[#9B9B9B]/30 mx-auto mb-10" />
       
-      <p className="text-[10px] font-black text-[#9B9B9B] uppercase tracking-[0.4em] mb-8">© 2026 GUIA LOJA DE MAQUIAGEM DE R$10 • TODOS OS DIREITOS RESERVADOS</p>
+      <p className="text-[10px] font-black text-[#9B9B9B] uppercase tracking-[0.4em] mb-8">© 2026 MÉTODO MAKE LUCRATIVA • TODOS OS DIREITOS RESERVADOS</p>
 
       <div className="pt-8 border-t border-white/10">
         <p className="text-[#9B9B9B] text-[9px] font-black uppercase tracking-widest mb-4">© 2026 • Todos os direitos reservados.</p>
