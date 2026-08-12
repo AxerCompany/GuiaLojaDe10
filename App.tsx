@@ -223,11 +223,11 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ posterUrl, videoU
           <>
             <img 
               src={posterUrl}
-              alt="Capa do Vídeo - Método Make Lucrativa"
+              alt="Video Poster"
               className="absolute inset-0 w-full h-full object-cover opacity-100 transition-transform duration-700 group-hover:scale-110"
-              fetchPriority={priority ? "high" : undefined}
+              fetchPriority={priority ? "high" : "auto"}
               loading={priority ? "eager" : "lazy"}
-              decoding="sync"
+              decoding="async"
               width={isVertical ? 320 : 1280}
               height={isVertical ? 568 : 720}
             />
@@ -403,7 +403,7 @@ const Hero: React.FC = () => (
 
       <div className="w-full max-w-3xl transform hover:scale-[1.01] transition-transform duration-500">
         <CustomVideoPlayer 
-          posterUrl="/hero-poster.webp"
+          posterUrl="https://i.postimg.cc/Kz4MtbDF/Whats-App-Image-2026-08-11-at-14-04-59.webp"
           label="CLIQUE PARA ATIVAR O SOM"
           videoUrl="https://vimeo.com/1217322803?share=copy&fl=sv&fe=ci"
           isVertical={true}
@@ -472,7 +472,7 @@ const HowItWorks: React.FC = () => (
 
 const Features: React.FC = () => {
   const images = [
-    "/hero-poster.webp",
+    "https://i.postimg.cc/Kz4MtbDF/Whats-App-Image-2026-08-11-at-14-04-59.webp",
     "https://i.postimg.cc/xCqzLQ32/Whats-App-Image-2026-08-11-at-14-04-59-(1).webp",
     "https://i.postimg.cc/Y9jWQ7zc/Whats-App-Image-2026-08-11-at-14-04-59-(2).webp",
     "https://i.postimg.cc/d1DyGFjP/Whats-App-Image-2026-08-11-at-14-05-00.webp",
@@ -1024,7 +1024,7 @@ const Specialist: React.FC = () => {
               <div className="absolute -inset-2 bg-gradient-to-r from-[#FF5C93] to-[#E91E63] rounded-[2.5rem] blur-xl opacity-20" />
               <div className="relative bg-[#FFF8FB] border-4 border-[#F2DCE6] rounded-[2.2rem] overflow-hidden shadow-2xl">
                 <img
-                  src="/camila.png"
+                  src="https://i.postimg.cc/bNbqVvyp/Chat-GPT-Image-11-de-ago-de-2026-14-24-19.png"
                   alt="Camila - Criadora do Método"
                   className="w-full h-auto object-cover"
                   referrerPolicy="no-referrer"
