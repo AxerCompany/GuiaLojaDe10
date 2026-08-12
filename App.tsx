@@ -96,11 +96,36 @@ const CountdownTimer: React.FC = () => {
   );
 };
 
+const ALL_SALES_NAMES = [
+  'Ana Paula', 'Julia S.', 'Renata M.', 'Cláudia V.', 'Beatriz L.', 
+  'Fernanda R.', 'Carla T.', 'Priscila M.', 'Sandra K.', 'Mônica P.', 
+  'Patrícia A.', 'Daniela C.', 'Camila B.', 'Vanessa S.', 'Luciana G.', 
+  'Aline F.', 'Juliana M.', 'Jéssica O.', 'Larissa R.', 'Mariana D.', 
+  'Amanda V.', 'Bruna S.', 'Gabriela N.', 'Thaís M.', 'Carolina H.', 
+  'Tatiane R.', 'Letícia P.', 'Débora F.', 'Simone B.', 'Fernanda A.'
+];
+
+function shuffleSalesNames<T>(array: T[]): T[] {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
 const ScarcityNotification: React.FC = () => {
   const [visible, setVisible] = useState(false);
   const [hasReachedThreshold, setHasReachedThreshold] = useState(false);
-  const [name, setName] = useState('Mariana');
-  const names = ['Ana Paula', 'Julia S.', 'Renata M.', 'Cláudia', 'Beatriz', 'Fernanda R.', 'Carla T.', 'Priscila', 'Sandra', 'Mônica', 'Patrícia', 'Daniela'];
+  const [name, setName] = useState('');
+  
+  const deckRef = useRef<string[]>([]);
+  const indexRef = useRef<number>(0);
+
+  useEffect(() => {
+    deckRef.current = shuffleSalesNames(ALL_SALES_NAMES);
+    indexRef.current = 0;
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -116,7 +141,29 @@ const ScarcityNotification: React.FC = () => {
     if (!hasReachedThreshold) return;
 
     const show = () => {
-      setName(names[Math.floor(names.length * Math.random())]);
+      if (deckRef.current.length === 0) {
+        deckRef.current = shuffleSalesNames(ALL_SALES_NAMES);
+        indexRef.current = 0;
+      }
+
+      let currentDeck = deckRef.current;
+      let idx = indexRef.current;
+
+      if (idx >= currentDeck.length) {
+        const lastShown = currentDeck[currentDeck.length - 1];
+        let newDeck = shuffleSalesNames(ALL_SALES_NAMES);
+        if (newDeck[0] === lastShown && newDeck.length > 1) {
+          [newDeck[0], newDeck[1]] = [newDeck[1], newDeck[0]];
+        }
+        deckRef.current = newDeck;
+        indexRef.current = 0;
+        idx = 0;
+      }
+
+      const nextName = deckRef.current[idx];
+      indexRef.current = idx + 1;
+
+      setName(nextName);
       setVisible(true);
       setTimeout(() => setVisible(false), 6000);
     };
@@ -132,7 +179,7 @@ const ScarcityNotification: React.FC = () => {
   return (
     <div className={`fixed bottom-6 left-6 z-[100] transition-all duration-700 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
       <div className="bg-[#FFFFFF]/95 backdrop-blur-md border border-[#F2DCE6] p-4 rounded-2xl flex items-center gap-4 shadow-[0_20px_50px_rgba(233,30,99,0.1)]">
-        <div className="w-10 h-10 bg-[#22C55E] rounded-full flex items-center justify-center text-white shadow-lg shadow-[#22C55E]/20">
+        <div className="w-10 h-10 bg-[#22C55E] rounded-full flex items-center justify-center text-white shadow-lg shadow-[#22C55E]/20 flex-shrink-0">
           <CheckCircle2 size={20} />
         </div>
         <div>
