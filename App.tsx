@@ -1080,10 +1080,6 @@ const Pricing: React.FC = () => {
 
   const handlePurchase = () => {
     if (isLoading) return;
-    
-    if (typeof window !== "undefined" && (window as any).fbq) {
-      (window as any).fbq('track', 'InitiateCheckout');
-    }
 
     setIsLoading(true);
     
