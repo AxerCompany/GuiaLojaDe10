@@ -1036,7 +1036,7 @@ const Pricing: React.FC = () => {
     
     setIsLoading(true);
     
-    const baseUrl = "https://pay.wiapy.com/Ww__qKklj3";
+    const baseUrl = "https://pay.wiapy.com/734v6YGryLWL";
     const currentParams = window.location.search;
     
     setTimeout(() => {
