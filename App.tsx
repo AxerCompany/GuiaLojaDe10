@@ -1034,14 +1034,26 @@ const Pricing: React.FC = () => {
   const handlePurchase = () => {
     if (isLoading) return;
     
+    if (typeof window !== "undefined" && (window as any).fbq) {
+      (window as any).fbq('track', 'InitiateCheckout');
+    }
+
     setIsLoading(true);
     
     const baseUrl = "https://pay.wiapy.com/734v6YGryLWL";
     const currentParams = window.location.search;
     
+    let destinationUrl = baseUrl;
+    if (currentParams) {
+      const cleanParams = currentParams.startsWith("?") ? currentParams : `?${currentParams}`;
+      destinationUrl = baseUrl.includes("?") 
+        ? `${baseUrl}&${cleanParams.substring(1)}` 
+        : `${baseUrl}${cleanParams}`;
+    }
+    
     setTimeout(() => {
-      window.location.href = baseUrl + currentParams;
-    }, 500);
+      window.location.href = destinationUrl;
+    }, 300);
 
     setTimeout(() => {
       setIsLoading(false);
