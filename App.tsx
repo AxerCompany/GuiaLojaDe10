@@ -405,7 +405,7 @@ const Hero: React.FC = () => (
         <CustomVideoPlayer 
           posterUrl="https://i.postimg.cc/Kz4MtbDF/Whats-App-Image-2026-08-11-at-14-04-59.webp"
           label="CLIQUE PARA ATIVAR O SOM"
-          videoUrl="https://vimeo.com/1217322803?share=copy&fl=sv&fe=ci"
+          videoUrl="https://vimeo.com/1220027080?share=copy&fl=sv&fe=ci"
           isVertical={true}
           priority={true}
         />
